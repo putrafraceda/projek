@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/linear_background"
+    android:padding="16dp">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selamatdatang"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/header2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/user"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <!-- Pencarian -->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/header2"
+        android:layout_marginTop="16dp"
+        android:padding="8dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Cari Buku"
+            android:padding="12dp"
+            android:background="#80FFFFFF"
+            android:inputType="text" />
+
+
+    </LinearLayout>
+
+    <!-- Rekomendasi Buku -->
+    <LinearLayout
+        android:id="@+id/rekomendasi_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rekomendasi_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rekomendasi"
+                android:textcolor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/viewall"
+                android:layout_alignParentRight="true"
+                android:textColor="#FF0000" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Daftar Buku Rekomendasi dengan Scroll Horizontal -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Item Buku -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/laskarpelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/bumimanusia"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bumimanusia"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/saman"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saman"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/cantikituluka"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cantikituluka"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laskar Pelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laskar Pelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laskar Pelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Terbaik Musim Ini -->
+    <LinearLayout
+        android:id="@+id/terbaik_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rekomendasi_section"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/terbaik_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terbaik Musim Ini"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All >>"
+                android:layout_alignParentRight="true"
+                android:textColor="#FF0000" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Daftar Buku Terbaik dengan Scroll Horizontal -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Item Buku -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laskar Pelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/bumimanusia"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bumi Manusia"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/saman"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saman"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laskar Pelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laskar Pelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laskar Pelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/laskarpelangi"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Laskar Pelangi Cover" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laskar Pelangi"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Tambahkan item buku lainnya seperti di atas -->
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/iconhomeblue" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:src="@drawable/iconfavoritbutton" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:src="@drawable/iconprofilebutton" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:src="@drawable/iconterakhirdilihatbutton" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:src="@drawable/iconsettingbutton" />
+    </LinearLayout>
+
+</RelativeLayout>
